@@ -1,0 +1,184 @@
+
+/*--------------------------------------------------------------
+1 - Global
+--------------------------------------------------------------*/
+
+html{
+  @include header-conf(14px, 300, 1.6);
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+main{
+  padding-top: 70px;
+  min-height: 100vh;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+//div{
+//  margin-bottom: 25px;
+//}
+p{
+  color: inherit;
+  margin-bottom: 10px;
+}
+button:focus {
+  outline: 0;
+}
+/*------------text styles------------*/
+
+h1, .title-size-big{
+  @include header-conf(32px, 500, 1.2);
+}
+
+h2 {
+  @include header-conf(22px, 700, 1.2);
+  text-align: center;
+  margin-bottom: 10px;
+}
+h3{
+  margin-bottom: 0;
+}
+h3, .title-size-medium {
+  @include header-conf(20px, 700, 2);
+}
+
+p, .text-main, span {
+  @include header-conf(14px, 700, 1.6);
+}
+.fw700{
+  font-weight: 700;
+}
+.fw500{
+  font-weight: 500;
+}
+
+.txt-white{
+  color: $white;
+}
+.txt-black{
+  color: $black;
+}
+.txt-green{
+  color: $green-bright;
+}
+.txt-red{
+  color: $red;
+}
+.txt-gray{
+  color: $gray-light;
+}
+.bg-black{
+  background-color: $black;
+}
+.bg-broun{
+  background-color: $broun;
+}
+.bg-gray{
+  background-color: $gray;
+}
+.bg-green{
+  background-color: $green;
+}
+
+.v-center{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+///*------------end with text styles------------*/
+
+
+//Lists
+
+.card-desc-position li, .space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+li{
+  margin-bottom: 2px;
+}
+////Icons
+
+i[class^=icon-]{
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.icon-checkbox{
+  background-image: url("../images/checkbox.png") ;
+  width: 44px;
+  height: 20px;
+}
+
+// Inputs
+
+/* LABEL */
+label{
+  input[type=checkbox]{
+    display: none;
+    &:checked{
+      +.icon-checkbox{
+        background-image: url("../images/checkbox-active.png");
+      }
+    }
+  }
+
+}
+
+// Select
+
+.nice-select{
+  &, &:active, &:focus, &.active, .list{
+    border: 1px solid $blue;
+    padding: 17px 15px;
+    width: 270px;
+    background-color: $black;
+  }
+  .list{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .option{
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 30px;
+    min-height: 30px;
+    &.focus, &.selected.focus, &:hover{
+      background-color: transparent;
+    }
+    &, &.selected{
+      font-weight: 300;
+    }
+  }
+  .current, li{
+    color: $white;
+    @include header-conf(16px, 300, 1);
+  }
+  .current{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    &::after{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      content: "";
+      background: url("../images/arrow-down.png") no-repeat center;
+      width: 18px;
+      height: 18px;
+      background-size: contain;
+
+    }
+  }
+}

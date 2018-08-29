@@ -1,0 +1,47 @@
+// Title Block
+
+.title-block{
+  padding: 30px 24px 30px 135px;
+  @media (max-width: 750px) {
+    padding: 20px;
+  }
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: $gray-lightest;
+  border: 1px solid $black-light;
+}
+
+// Currency blocks
+
+.card{
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+
+  background-image: url("../images/card-img-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &-etherium .card-img{
+    background-image: url("../images/etherium.png");
+  }
+  &-litecoin .card-img{
+    background-image: url("../images/lincoin.png");
+  }
+  &-bitcoin .card-img{
+    background-image: url("../images/bitcoin.png");
+  }
+}
+
+.card-img{
+  height: 120px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+

@@ -1,0 +1,25 @@
+/* Color palette */
+
+$white: #ffffff;
+$black: #000000;
+$green: #8fce1d;
+$red: #ff0000;
+
+
+
+@function remy($pxsize) {
+  @return ($pxsize/16)+rem;
+}
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+@mixin header-conf($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}

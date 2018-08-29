@@ -1,0 +1,36 @@
+/* Color palette */
+
+$white: #ffffff;
+
+$black: #061823;
+$black-light: #14303C;
+
+$green: #07452B;
+$green-bright: #70c446;
+
+$red: #c80e24;
+
+$gray: #333;
+$gray-light: rgba(255, 255, 255, 0.2);
+$gray-lightest: rgba(252, 252, 252, 0.03);
+
+$broun: #301103;
+
+$blue: #92e8fe;
+
+@function remy($pxsize) {
+  @return ($pxsize/16)+rem;
+}
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+@mixin header-conf($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
